@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: irnnanode01
+  labels:
+    app: manualpod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+  nodeName: gke-cluster-1-default-pool-af83ad88-8a46
