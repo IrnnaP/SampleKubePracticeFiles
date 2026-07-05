@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: simpleiruapp
+  labels:
+    app: App1
+    function: frontend
+spec:
+  selector:
+    matchLabels:
+      app: App1
+  template:
+    metadata:
+      labels:
+        app: App1
+        function: frontend
+    spec:
+      containers:
+        - name: simpleiruapp
+          image: simpleiruapp
