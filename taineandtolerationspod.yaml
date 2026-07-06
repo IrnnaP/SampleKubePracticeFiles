@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: taintandtolerations
+  labels:
+    app: Apptainttoleration
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+  tolerations:
+    - key: workload
+      value: gpu
+      operator: equal
+      effect: NoSchedule
